@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Connect</title>
+    <meta name="description"
+        content="Book expert painters, carpenters, plumbers, and electricians instantly. Reliable home services at your doorstep.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-house-chimney-medical"></i>
+                Service<span>Connect</span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#features" class="nav-link">Why Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="btn btn-primary" id="navBookBtn">Book Now</a>
+                <a href="#" class="btn btn-accent" id="navEmergencyBtn">Emergency</a>
+                <a href="#" class="btn btn-primary" id="ordersBtn">Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- 3D Floating Bubbles & Elements -->
+        <div class="hero-3d-bg">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+            <div class="bubble b4"></div>
+
+            <!-- 3D Rotating Service Cube -->
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face front"><i class="fa-solid fa-wrench"></i></div>
+                    <div class="face back"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="face right"><i class="fa-solid fa-paint-roller"></i></div>
+                    <div class="face left"><i class="fa-solid fa-broom"></i></div>
+                    <div class="face top"><i class="fa-solid fa-house"></i></div>
+                    <div class="face bottom"><i class="fa-solid fa-hammer"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Expert Home Services at <span>Your Doorstep</span></h1>
+                <p>Trusted professionals for all your home repair, maintenance, and cleaning needs. Fast, reliable, and
+                    affordable.</p>
+
+                <div class="search-bar">
+                    <input type="text" id="serviceSearch" class="search-input"
+                        placeholder="What service do you need? (e.g. Plumber)">
+                    <button class="btn btn-accent" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass" style="margin-right: 8px;"></i> Search
+                    </button>
+                </div>
+
+                <div class="hero-tags">
+                    <span>Popular:</span>
+                    <span class="tag">AC Repair</span>
+                    <span class="tag">Deep Cleaning</span>
+                    <span class="tag">Electrician</span>
+                    <span class="tag">Painting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Premium Services</h2>
+            <p class="section-subtitle">We provide a wide range of top-notch services to keep your home running smoothly
+                and looking beautiful.</p>
+
+            <div class="services-grid" id="servicesGrid">
+
+                <!-- Service Card 1 -->
+                <div class="service-card" data-service="painter painting paint">
+                    <div class="service-img-wrapper" style="background-color: #e0f2fe;">
+                        <img class="service-photo" alt="Painter service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23e0f2fe'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23ffffff'/><circle cx='170' cy='160' r='58' fill='%230d9488'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%2314b8a6'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%23f97316'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%2394a3b8'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%23cbd5e1'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>Painter</text><text x='170' y='178' text-anchor='middle' font-size='52'>🎨</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Professional Painters</h3>
+                        <p class="service-desc">Transform your home with our expert interior and exterior painting
+                            services.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹1999</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card" data-service="carpenter woodwork furniture">
+                    <div class="service-img-wrapper" style="background-color: #fef3c7;">
+                        <img class="service-photo" alt="Carpenter service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23fef3c7'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23fffaf0'/><circle cx='170' cy='160' r='58' fill='%23d97706'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%23f59e0b'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%2392400e'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%23b45309'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%23fbbf24'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>Carpenter</text><text x='170' y='178' text-anchor='middle' font-size='52'>🪚</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Expert Carpenters</h3>
+                        <p class="service-desc">Custom furniture, repairs, door installations, and general woodwork.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹299</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card" data-service="plumber pipe leak water">
+                    <div class="service-img-wrapper" style="background-color: #dbeafe;">
+                        <img class="service-photo" alt="Plumber service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23dbeafe'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23f8fbff'/><circle cx='170' cy='160' r='58' fill='%232563eb'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%233b82f6'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%231d4ed8'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%2360a5fa'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%2393c5fd'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>Plumber</text><text x='170' y='178' text-anchor='middle' font-size='52'>🔧</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Reliable Plumbers</h3>
+                        <p class="service-desc">Fix leaks, unclog drains, install sanitaryware, and resolve all piping
+                            issues.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹199</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card" data-service="electrician wire fan light switch">
+                    <div class="service-img-wrapper" style="background-color: #fef08a;">
+                        <img class="service-photo" alt="Electrician service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23fef08a'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23fffef0'/><circle cx='170' cy='160' r='58' fill='%23ca8a04'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%23eab308'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%23a16207'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%23ca8a04'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%23fde047'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>Electrician</text><text x='170' y='178' text-anchor='middle' font-size='52'>💡</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Certified Electricians</h3>
+                        <p class="service-desc">Wiring, switchboards, fan installations, and fault repairs handled
+                            safely.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹149</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card" data-service="cleaning home house sweep mop">
+                    <div class="service-img-wrapper" style="background-color: #ccfbf1;">
+                        <img class="service-photo" alt="Cleaning service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23ccfbf1'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23f8fffd'/><circle cx='170' cy='160' r='58' fill='%230f766e'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%2314b8a6'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%230f766e'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%2314b8a6'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%2399f6e4'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>Cleaning</text><text x='170' y='178' text-anchor='middle' font-size='52'>🧹</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">House Cleaning</h3>
+                        <p class="service-desc">Deep cleaning for your entire home, bathroom, kitchen, or specific
+                            areas.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹699</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card" data-service="ac technician air conditioner cooling">
+                    <div class="service-img-wrapper" style="background-color: #e0e7ff;">
+                        <img class="service-photo" alt="AC technician service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23e0e7ff'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23f8faff'/><circle cx='170' cy='160' r='58' fill='%234f46e5'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%236366f1'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%234f46e5'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%236366f1'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%23c7d2fe'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>AC Repair</text><text x='170' y='178' text-anchor='middle' font-size='52'>❄️</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">AC Technicians</h3>
+                        <p class="service-desc">AC repair, servicing, installation, and gas refilling for all brands.
+                        </p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹399</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="service-card" data-service="tv technician television repair screen">
+                    <div class="service-img-wrapper" style="background-color: #fae8ff;">
+                        <img class="service-photo" alt="TV technician service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23fae8ff'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23fff9ff'/><circle cx='170' cy='160' r='58' fill='%23c026d3'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%23d946ef'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%23a21caf'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%23d946ef'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%23f5d0fe'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>TV Repair</text><text x='170' y='178' text-anchor='middle' font-size='52'>📺</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">TV Technicians</h3>
+                        <p class="service-desc">Wall mounting, screen repair, and troubleshooting for LED/Smart TVs.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹349</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="service-card" data-service="pest control bugs insects rats">
+                    <div class="service-img-wrapper" style="background-color: #fca5a5;">
+                        <img class="service-photo" alt="Pest control service illustration"
+                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23fca5a5'/><rect x='40' y='40' width='520' height='320' rx='28' fill='%23fff7f7'/><circle cx='170' cy='160' r='58' fill='%23b91c1c'/><rect x='130' y='220' width='82' height='78' rx='18' fill='%23ef4444'/><rect x='270' y='110' width='200' height='34' rx='17' fill='%23b91c1c'/><rect x='270' y='162' width='160' height='24' rx='12' fill='%23ef4444'/><rect x='270' y='206' width='190' height='24' rx='12' fill='%23fecaca'/><text x='300' y='325' text-anchor='middle' font-size='42' font-family='Arial, sans-serif' font-weight='700' fill='%230f172a'>Pest Control</text><text x='170' y='178' text-anchor='middle' font-size='52'>🐞</text></svg>">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Pest Control</h3>
+                        <p class="service-desc">Effective treatments for cockroaches, termites, bedbugs, and more.</p>
+                        <div class="service-footer">
+                            <span class="service-price">Starts at ₹899</span>
+                            <a href="#" class="btn btn-primary"
+                                style="padding: 0.5rem 1rem; font-size: 0.875rem;">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services Section -->
+    <section class="emergency-services">
+        <div class="container">
+            <div class="emergency-shell">
+                <div class="emergency-copy">
+                    <span class="section-kicker">Emergency Help</span>
+                    <h2>Need urgent help at home?</h2>
+                    <p class="section-subtitle emergency-subtitle">Fast-response support for sudden leaks, power issues,
+                        lock troubles, and AC breakdowns. Designed for customers who need help today, not next week.</p>
+
+                    <div class="emergency-points">
+                        <div class="emergency-point">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Electrical fault support within priority time slots</span>
+                        </div>
+                        <div class="emergency-point">
+                            <i class="fa-solid fa-faucet-drip"></i>
+                            <span>Leak control and urgent plumbing dispatch</span>
+                        </div>
+                        <div class="emergency-point">
+                            <i class="fa-solid fa-fan"></i>
+                            <span>Cooling and appliance rescue during peak hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emergency-panel">
+                    <div class="emergency-card">
+                        <span class="emergency-badge">Live Priority</span>
+                        <h3>Emergency Booking Desk</h3>
+                        <p>Customers can raise an urgent job request and get a faster callback from the support team.</p>
+
+                        <div class="emergency-grid">
+                            <div>
+                                <span class="summary-label">Hotline</span>
+                                <strong>+91 1800 202 4040</strong>
+                            </div>
+                            <div>
+                                <span class="summary-label">Coverage</span>
+                                <strong>7 AM to 11 PM</strong>
+                            </div>
+                            <div>
+                                <span class="summary-label">Best For</span>
+                                <strong>Leak, power, AC, lock issues</strong>
+                            </div>
+                            <div>
+                                <span class="summary-label">Response Goal</span>
+                                <strong>10-30 mins callback</strong>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-accent emergency-btn">Request Emergency Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <p class="section-subtitle">Real feedback from customers across our most-booked home services.</p>
+
+            <div class="review-filters" id="reviewFilters">
+                <button type="button" class="review-filter is-active" data-review-filter="all">All Reviews</button>
+                <button type="button" class="review-filter" data-review-filter="painting">Painting</button>
+                <button type="button" class="review-filter" data-review-filter="carpenter">Carpenter</button>
+                <button type="button" class="review-filter" data-review-filter="plumber">Plumber</button>
+                <button type="button" class="review-filter" data-review-filter="electrician">Electrician</button>
+                <button type="button" class="review-filter" data-review-filter="cleaning">Cleaning</button>
+                <button type="button" class="review-filter" data-review-filter="emergency">Emergency</button>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <article class="review-card" data-review-category="painting">
+                    <div class="review-head">
+                        <div>
+                            <h3>Ananya S.</h3>
+                            <p>Interior Painting</p>
+                        </div>
+                        <span class="review-rating">5.0</span>
+                    </div>
+                    <p class="review-copy">The painter arrived on time, covered all furniture carefully, and finished the wall texture far better than I expected.</p>
+                    <div class="review-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Whitefield</span>
+                        <span><i class="fa-solid fa-calendar-days"></i> 2 days ago</span>
+                    </div>
+                </article>
+
+                <article class="review-card" data-review-category="carpenter">
+                    <div class="review-head">
+                        <div>
+                            <h3>Rakesh P.</h3>
+                            <p>Wardrobe Repair</p>
+                        </div>
+                        <span class="review-rating">4.8</span>
+                    </div>
+                    <p class="review-copy">The carpenter explained the fix clearly, replaced the damaged hinges, and even aligned the doors before leaving.</p>
+                    <div class="review-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Indiranagar</span>
+                        <span><i class="fa-solid fa-calendar-days"></i> 4 days ago</span>
+                    </div>
+                </article>
+
+                <article class="review-card" data-review-category="plumber emergency">
+                    <div class="review-head">
+                        <div>
+                            <h3>Megha R.</h3>
+                            <p>Emergency Leak Fix</p>
+                        </div>
+                        <span class="review-rating">4.9</span>
+                    </div>
+                    <p class="review-copy">I booked during an emergency water leak and got a callback quickly. The plumber stopped the leak and saved my kitchen cabinet area.</p>
+                    <div class="review-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> HSR Layout</span>
+                        <span><i class="fa-solid fa-calendar-days"></i> Yesterday</span>
+                    </div>
+                </article>
+
+                <article class="review-card" data-review-category="electrician emergency">
+                    <div class="review-head">
+                        <div>
+                            <h3>Farida K.</h3>
+                            <p>Power Trip Support</p>
+                        </div>
+                        <span class="review-rating">5.0</span>
+                    </div>
+                    <p class="review-copy">The electrician found the short circuit in one visit, explained the issue simply, and restored power much faster than local options.</p>
+                    <div class="review-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Koramangala</span>
+                        <span><i class="fa-solid fa-calendar-days"></i> Today</span>
+                    </div>
+                </article>
+
+                <article class="review-card" data-review-category="cleaning">
+                    <div class="review-head">
+                        <div>
+                            <h3>Simran T.</h3>
+                            <p>Deep Cleaning</p>
+                        </div>
+                        <span class="review-rating">4.7</span>
+                    </div>
+                    <p class="review-copy">The team was polite, systematic, and surprisingly fast. The bathroom and kitchen looked freshly renovated after the service.</p>
+                    <div class="review-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> JP Nagar</span>
+                        <span><i class="fa-solid fa-calendar-days"></i> 3 days ago</span>
+                    </div>
+                </article>
+
+                <article class="review-card" data-review-category="emergency">
+                    <div class="review-head">
+                        <div>
+                            <h3>Dev M.</h3>
+                            <p>Late-Night Emergency Request</p>
+                        </div>
+                        <span class="review-rating">4.9</span>
+                    </div>
+                    <p class="review-copy">The emergency desk called back in under 15 minutes, confirmed the issue, and arranged a technician slot for the same evening.</p>
+                    <div class="review-meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Electronic City</span>
+                        <span><i class="fa-solid fa-calendar-days"></i> 1 week ago</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Service Connect?</h2>
+            <p class="section-subtitle">We ensure quality, safety, and reliability in every service we provide.</p>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="feature-title">Verified Professionals</h3>
+                    <p class="feature-desc">All our experts undergo strict background checks and skill verification.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: #eff6ff; color: #3b82f6;">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="feature-title">Transparent Pricing</h3>
+                    <p class="feature-desc">No hidden charges. You know the exact cost before the service starts.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: #fef2f2; color: #ef4444;">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">On-Time Service</h3>
+                    <p class="feature-desc">We respect your time. Our professionals arrive exactly when scheduled.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon" style="background-color: #fdf4ff; color: #d946ef;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="feature-title">Service Guarantee</h3>
+                    <p class="feature-desc">Not satisfied? We will re-work on it until you are completely happy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- App Download Section -->
+    <section class="app-download">
+        <div class="container">
+            <div class="app-wrapper">
+                <div class="app-content">
+                    <h2>Book services on the go!</h2>
+                    <p>Download the Service Connect app for exclusive discounts, priority booking, and real-time
+                        tracking of your service professionals.</p>
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn">
+                            <i class="fa-brands fa-google-play store-icon"></i>
+                            <div>
+                                <div style="font-size: 0.75rem; font-weight: 400; color: #64748b;">GET IT ON</div>
+                                <div>Google Play</div>
+                            </div>
+                        </a>
+                        <a href="#" class="store-btn">
+                            <i class="fa-brands fa-apple store-icon" style="color: #000;"></i>
+                            <div>
+                                <div style="font-size: 0.75rem; font-weight: 400; color: #64748b;">Download on the</div>
+                                <div>App Store</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-house-chimney-medical" style="color: var(--primary-color);"></i>
+                        ServiceConnect
+                    </div>
+                    <p class="footer-desc">Your trusted partner for all home services. Delivering quality work with
+                        verified professionals across the city.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Our Terms</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Electrician</a></li>
+                        <li><a href="#" class="footer-link">Plumber</a></li>
+                        <li><a href="#" class="footer-link">Carpenter</a></li>
+                        <li><a href="#" class="footer-link">AC Repair</a></li>
+                        <li><a href="#" class="footer-link">Deep Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-location-dot"
+                                style="color: var(--primary-color); padding-top: 4px;"></i>
+                            <span>123 Service Street, Connect Tower, Tech Park Area, City 400001</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 1rem; align-items: center;">
+                            <i class="fa-solid fa-phone" style="color: var(--primary-color);"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: center;">
+                            <i class="fa-solid fa-envelope" style="color: var(--primary-color);"></i>
+                            <span>support@serviceconnect.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2024 Service Connect. All rights reserved. Built with precision and care.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="modal-overlay">
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <button class="close-modal-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Login to Continue</h3>
+                <p>Please enter your details to book a service.</p>
+            </div>
+            <form id="loginForm" class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email or Phone</label>
+                    <input type="text" id="loginEmail" class="form-control"
+                        placeholder="Enter your email or phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password / OTP</label>
+                    <input type="password" id="loginPassword" class="form-control" placeholder="Enter password or OTP"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login securely</button>
+            </form>
+        </div>
+
+        <!-- Discount Modal -->
+        <div id="discountModal" class="modal" style="display: none;">
+            <button class="close-modal-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Select a Discount Voucher</h3>
+                <p>Choose one customer offer before you continue to scheduling.</p>
+            </div>
+            <form id="discountForm" class="modal-form">
+                <div class="form-group">
+                    <label>Available vouchers</label>
+                    <div class="discount-options">
+                        <label class="discount-option">
+                            <input type="radio" name="discountOption" value="first" checked>
+                            <span class="discount-card">
+                                <strong>First Order 20% Off</strong>
+                                <small>Best for new customers and saves up to Rs 400.</small>
+                            </span>
+                        </label>
+                        <label class="discount-option">
+                            <input type="radio" name="discountOption" value="weekday">
+                            <span class="discount-card">
+                                <strong>Weekday Saver 10% Off</strong>
+                                <small>Good for flexible weekday bookings and planned jobs.</small>
+                            </span>
+                        </label>
+                        <label class="discount-option">
+                            <input type="radio" name="discountOption" value="combo">
+                            <span class="discount-card">
+                                <strong>Combo Add-on Rs 150 Off</strong>
+                                <small>Useful when two small home fixes are booked together.</small>
+                            </span>
+                        </label>
+                        <label class="discount-option">
+                            <input type="radio" name="discountOption" value="wallet">
+                            <span class="discount-card">
+                                <strong>Wallet Bonus 12% Off</strong>
+                                <small>Nice for fast online payment and quick confirmation.</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="discount-summary">
+                    <div class="discount-line">
+                        <span>Service price</span>
+                        <strong id="bookingBasePrice">Rs 1999</strong>
+                    </div>
+                    <div class="discount-line discount-line--save">
+                        <span>You save</span>
+                        <strong id="bookingSavings">- Rs 400</strong>
+                    </div>
+                    <div class="discount-line discount-line--total">
+                        <span>Estimated total</span>
+                        <strong id="bookingFinalPrice">Rs 1599</strong>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Continue to Date & Address</button>
+            </form>
+        </div>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal" style="display: none;">
+            <button class="close-modal-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Choose Date, Time & Address</h3>
+                <p>Service: <strong id="bookingServiceName" style="color: var(--primary-color);">Selected
+                        Service</strong></p>
+            </div>
+            <form id="bookingForm" class="modal-form">
+                <div class="form-group">
+                    <label>Voucher selected</label>
+                    <div class="summary-chip">
+                        <span class="summary-label">Discount Choice</span>
+                        <strong id="selectedVoucherName">First Order 20% Off</strong>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-col">
+                        <label for="bookingDate">Date</label>
+                        <input type="date" id="bookingDate" class="form-control" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="bookingTime">Time</label>
+                        <input type="time" id="bookingTime" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookingAddress">Address</label>
+                    <textarea id="bookingAddress" class="form-control" placeholder="Enter complete address" rows="3"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Booking Steps</label>
+                    <div class="booking-process">
+                        <div class="booking-process-step is-active">
+                            <strong>1. Schedule visit</strong>
+                            <span>Set the date, time, and home address.</span>
+                        </div>
+                        <div class="booking-process-step">
+                            <strong>2. Select payment</strong>
+                            <span>Choose cash or card/UPI before placing the order.</span>
+                        </div>
+                        <div class="booking-process-step">
+                            <strong>3. View assigned pro</strong>
+                            <span>Next screen shows name, phone number, ETA, and verification.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="cash" checked>
+                            <span class="payment-card">
+                                <i class="fa-solid fa-money-bill-wave"></i> Cash
+                            </span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="card">
+                            <span class="payment-card">
+                                <i class="fa-solid fa-credit-card"></i> Card / UPI
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+            </form>
+        </div>
+
+        <!-- Payment Modal -->
+        <div id="paymentModal" class="modal" style="display: none;">
+            <button class="close-modal-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-shield-halved" style="color: #10b981; margin-right: 8px;"></i>Secure Payment</h3>
+                <p>Complete your payment to confirm the booking.</p>
+            </div>
+            <form id="paymentForm" class="modal-form">
+                <div class="payment-tabs" style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <button type="button" class="btn" style="flex: 1; border: 2px solid var(--primary-color); background: rgba(59, 130, 246, 0.1); color: var(--primary-color); font-weight: bold;">UPI</button>
+                    <button type="button" class="btn" style="flex: 1; border: 1px solid #cbd5e1; background: transparent; color: var(--text-color);">Debit / Credit Card</button>
+                </div>
+                <div class="form-group">
+                    <label>UPI ID or Mobile Number</label>
+                    <input type="text" class="form-control" placeholder="e.g. 9876543210@okicici" required>
+                </div>
+                <div class="payment-summary" style="background: var(--light-bg); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 1.1rem;">
+                        <span>Amount Payable:</span>
+                        <strong id="paymentModalTotal" style="color: var(--primary-color);">Rs 0</strong>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Pay Now</button>
+            </form>
+        </div>
+
+        <!-- Success message -->
+        <div id="successModal" class="modal success-modal" style="display: none;">
+            <button class="close-modal-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="success-hero">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h3>Booking Confirmed!</h3>
+                <p>Your service professional will arrive at the scheduled time. We also prepared your next step below.
+                </p>
+            </div>
+
+            <div class="success-summary">
+                <div class="summary-chip" style="background: rgba(59, 130, 246, 0.1); border-left: 3px solid #3b82f6;">
+                    <span class="summary-label" style="color: #1d4ed8;"><i class="fa-solid fa-calendar-check"></i> Order Placed</span>
+                    <strong id="successOrderDate" style="color: #1e40af;">Just now</strong>
+                </div>
+                <div class="summary-chip">
+                    <span class="summary-label">Service</span>
+                    <strong id="successServiceName">Selected Service</strong>
+                </div>
+                <div class="summary-chip">
+                    <span class="summary-label">Visit Slot</span>
+                    <strong id="successBookingSlot">Date and time</strong>
+                </div>
+                <div class="summary-chip">
+                    <span class="summary-label">Payment Method</span>
+                    <strong id="successPaymentMethod">Cash</strong>
+                </div>
+                <div class="summary-chip">
+                    <span class="summary-label">Voucher Used</span>
+                    <strong id="successDiscountLabel">First Order 20% Off</strong>
+                </div>
+            </div>
+
+            <div class="order-journey">
+                <div class="order-journey-step is-active">
+                    <span class="order-journey-number">1</span>
+                    <div>
+                        <strong>Order placed successfully</strong>
+                        <p id="journeyPlacedText">Your booking is confirmed in our system.</p>
+                    </div>
+                </div>
+                <div class="order-journey-step">
+                    <span class="order-journey-number">2</span>
+                    <div>
+                        <strong>Professional assigned</strong>
+                        <p id="journeyAssignedText">A verified expert is matched for your request.</p>
+                    </div>
+                </div>
+                <div class="order-journey-step">
+                    <span class="order-journey-number">3</span>
+                    <div>
+                        <strong>Arrival tracking</strong>
+                        <p id="journeyArrivalText">Check ETA and live progress in Orders.</p>
+                    </div>
+                </div>
+                <div class="order-journey-step">
+                    <span class="order-journey-number">4</span>
+                    <div>
+                        <strong>Service begins</strong>
+                        <p id="journeyDurationText">Expected job duration will be shared before work starts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-booking-grid">
+                <section class="addon-card addon-card--pro">
+                    <div class="addon-head">
+                        <span class="addon-badge">Live</span>
+                        <h4>Your service expert is assigned</h4>
+                    </div>
+                    <p class="addon-copy">Designed with a ride-tracking feel, but tailored for home services so
+                        customers instantly trust who is arriving.</p>
+
+                    <div class="pro-card">
+                        <div class="pro-avatar" id="assignedProAvatar">RK</div>
+                        <div class="pro-main">
+                            <strong id="assignedProName">Rohit Kumar</strong>
+                            <span id="assignedProRole">Senior Electrician</span>
+                            <div class="pro-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span id="assignedProRating">4.9 rating</span>
+                                <span class="pro-dot"></span>
+                                <span id="assignedProJobs">240 jobs completed</span>
+                            </div>
+                        </div>
+                        <div class="pro-eta">
+                            <span class="summary-label">ETA</span>
+                            <strong id="assignedProEta">18 mins</strong>
+                        </div>
+                    </div>
+
+                    <div class="pro-stats">
+                        <div class="pro-stat" style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding-left: 8px;">
+                            <span class="summary-label" style="color: #059669; font-weight: 600;"><i class="fa-solid fa-shield-halved"></i> Start Service PIN</span>
+                            <strong id="assignedProOtp" style="font-size: 1.25rem; letter-spacing: 2px; color: #065f46;">5412</strong>
+                        </div>
+                        <div class="pro-stat">
+                            <span class="summary-label">Contact</span>
+                            <strong id="assignedProPhone">+91 98765 22110</strong>
+                        </div>
+                        <div class="pro-stat">
+                            <span class="summary-label">Arrival Window</span>
+                            <strong id="assignedArrivalWindow">Today, 3:00 PM</strong>
+                        </div>
+                        <div class="pro-stat">
+                            <span class="summary-label">Status</span>
+                            <strong id="assignedProStatus">On the way</strong>
+                        </div>
+                        <div class="pro-stat">
+                            <span class="summary-label">Verification</span>
+                            <strong id="assignedProVerification">ID and skill verified</strong>
+                        </div>
+                        <div class="pro-stat">
+                            <span class="summary-label">Est. Service Time</span>
+                            <strong id="assignedServiceDuration">45-60 mins</strong>
+                        </div>
+                        <div class="pro-stat">
+                            <span class="summary-label">Order Total</span>
+                            <strong id="assignedOrderTotal">Rs 0</strong>
+                        </div>
+                    </div>
+
+                    <div class="tracking-line" aria-hidden="true">
+                        <span class="tracking-step" data-stage="booked">Booked</span>
+                        <span class="tracking-step" data-stage="assigned">Assigned</span>
+                        <span class="tracking-step" data-stage="arriving">Arriving</span>
+                        <span class="tracking-step" data-stage="working">Working</span>
+                    </div>
+
+                    <div class="addon-actions">
+                        <a id="callProBtn" href="tel:+917507147217" class="btn btn-dark">
+                            <i class="fa-solid fa-phone" style="margin-right: 8px;"></i> Call Expert
+                        </a>
+                    </div>
+                </section>
+
+                <section class="addon-card addon-card--prep">
+                    <div class="addon-head">
+                        <span class="addon-badge addon-badge--soft">New Idea</span>
+                        <h4>Arrival brief for your visit</h4>
+                    </div>
+                    <p class="addon-copy">A polished details panel that makes the booking feel premium and transparent.
+                    </p>
+
+                    <ul class="prep-list">
+                        <li><i class="fa-solid fa-check"></i><span id="briefAddress">Address confirmed for the
+                                visit.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span id="briefService">Your selected service is ready to
+                                begin.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span id="briefPhone">Keep your phone available for the
+                                arrival call.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span id="briefPayment">Payment method will be shown after
+                                order placement.</span></li>
+                    </ul>
+
+                    <div class="prep-note">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <p id="prepNoteText">Tip: the expert card can later be connected to live backend data for real
+                            tracking.</p>
+                    </div>
+                </section>
+            </div>
+
+            <button id="closeSuccessBtn" class="btn btn-primary btn-block">Done</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
